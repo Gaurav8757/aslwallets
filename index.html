@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <title>ASL Wallets</title>
+</head>
+
+<body class="antialiased" x-data="{ isOpen : false}">
+
+    <!-- header -->
+    <header class="header">
+        <!-- container -->
+        <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
+            <!-- header wrapper -->
+            <div class="header-wrapper flex items-center justify-between">
+
+                <!-- header logo -->
+                <div class="header-logo">
+                    <!-- <h1 class="font-semibold text-base text-black leading-relaxed"><a class="text-sm md:text-base">ASL
+                            Wallets</a></h1> -->
+                            <img src="assets/images/logo_svg.svg" alt="Aslwallets" class="h-12 w-12 md:h-28 md:w-28">
+                </div>
+
+                <!-- mobile toggle -->
+                <div class="toggle md:hidden">
+                    <button @click=" isOpen = true" @keydown.escape=" isOpen = false">
+                        <svg class="h-6 w-6 fill-current text-black" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navbar -->
+                <navbar class="navbar hidden md:block">
+                    <ul class="flex space-x-8 text-sm md:text-base font-semibold tracking-wide">
+                        <li><a href="#" class="active border-b-2 border-orange-500 pb-2">Home</a></li>
+                        <li><a href="#" class="hover:text-orange-500">About Us</a></li>
+                        <li><a href="#" class="hover:text-orange-500">Services</a></li>
+                        <li><a href="#" class="hover:text-orange-500">Contact Us</a></li>
+
+                        <li><a href="#" class="hover:text-orange-500">Login</a></li>
+                        <li><a href="#"
+                                class="cta bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">Get
+                                the App</a></li>
+                    </ul>
+                </navbar>
+
+            </div>
+        </div>
+
+    </header><!-- end header -->
+
+    <!-- hero -->
+     
+    <div class="hero bg-gray-100 md:pb-60 md:pt-20 relative"> <!-- Added pb-32 for bottom padding and relative positioning -->
+        <!-- container -->
+        <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto md:pt-12 pt-6 md:pb-16 pb-8"> <!-- Added padding top and bottom -->
+            <!-- hero wrapper -->
+            <div class="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+                <!-- hero text -->
+                <div class="hero-text col-span-6">
+                    <h1 class=" font-semibold text-2xl md:text-4xl max-w-xl text-slate-700 leading-relaxed">Welcome to
+                        <span
+                            class="font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-lime-500 to-green-500 italic">ASL
+                            WALLETS</span> <br /> Your One-Stop Digital Service Platform
+                    </h1>
+                    <hr class=" w-12 h-1 bg-orange-500 rounded-full mt-4">
+                    <p class="text-gray-800 text-base leading-relaxed mt-8 font-semibold">India&apos;s leading service
+                        provider for Aadhaar-Enabled Payments and Utility Solutions. <br /> Our platform brings you an
+                        extensive range of digital and financial services.</p>
+                    <div class="get-app flex space-x-5 mt-10 justify-center md:justify-start">
+                        <button
+                            class="apple bg-white shadow-md px-3 py-2 cursor-pointer rounded-lg flex items-center space-x-4">
+                            <div class="logo">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" xmlns="http://www.w3.org/2000/svg" width="419.955"
+                                    height="512" viewBox="0 0 419.955 512">
+                                    <g transform="translate(-46.022)">
+                                        <path
+                                            d="M185.255,512c-76.2-.439-139.233-155.991-139.233-235.21,0-129.4,97.075-157.734,134.487-157.734,16.86,0,34.863,6.621,50.742,12.48,11.1,4.087,22.588,8.306,28.975,8.306,3.823,0,12.832-3.589,20.786-6.738,16.963-6.753,38.071-15.146,62.651-15.146h.146c18.354,0,74,4.028,107.461,54.272l7.837,11.777-11.279,8.511c-16.113,12.158-45.513,34.336-45.513,78.267,0,52.031,33.3,72.041,49.292,81.665,7.061,4.248,14.37,8.628,14.37,18.208,0,6.255-49.922,140.566-122.417,140.566-17.739,0-30.278-5.332-41.338-10.034-11.191-4.761-20.845-8.862-36.8-8.862-8.086,0-18.311,3.823-29.136,7.881C221.5,505.73,204.752,512,185.753,512Z" />
+                                        <path
+                                            d="M351.343,0c1.888,68.076-46.8,115.3-95.425,112.342C247.9,58.015,304.54,0,351.343,0Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <p class=" text-xs md:text-base text-gray-600">Download on the</p>
+                                <p class=" text-xs md:text-base font-semibold text-gray-900">Apple Store</p>
+                            </div>
+                        </button>
+                        <button
+                            class="google bg-white shadow-md px-3 py-2 cursor-pointer rounded-lg flex items-center space-x-4">
+                            <div class="image">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" xmlns="http://www.w3.org/2000/svg" width="436.057"
+                                    height="469.847" viewBox="0 0 436.057 469.847">
+                                    <g transform="translate(-16.896)">
+                                        <path
+                                            d="M270.336,234.965,34.39,462.165A40.146,40.146,0,0,1,16.9,428.672V41.258A40.146,40.146,0,0,1,34.39,7.765Z"
+                                            fill="#2196f3" />
+                                        <path
+                                            d="M352.9,155.6l-82.56,79.36L34.39,7.765a31.446,31.446,0,0,1,2.773-1.92A40.363,40.363,0,0,1,77.91,5.2Z"
+                                            fill="#4caf50" />
+                                        <path
+                                            d="M452.95,234.965a40.791,40.791,0,0,1-21.333,36.267L352.9,314.325l-82.56-79.36L352.9,155.6l78.72,43.093A40.791,40.791,0,0,1,452.95,234.965Z"
+                                            fill="#ffc107" />
+                                        <path
+                                            d="M352.9,314.325,77.91,464.725a40.9,40.9,0,0,1-40.747-.64,31.44,31.44,0,0,1-2.773-1.92l235.947-227.2Z"
+                                            fill="#f44336" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <p class="text-xs md:text-base text-gray-600">Download it from</p>
+                                <p class="text-xs md:text-base font-semibold text-gray-900">Google Play</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- hero image / carousel -->
+                <div class="hero-image col-span-6">
+                    <swiper-container class="mySwiper h-full w-full" pagination="true" pagination-clickable="true"
+                        navigation="true" space-between="30" loop="true" centered-slides="true" autoplay-delay="2500"
+                        autoplay-disable-on-interaction="false">
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/AEPS.png" alt="wallets" class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/Bank account verification.png" alt="City"
+                                class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/bulk sms.png" alt="Technology" class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/cash deposit & cms.png" alt="People"
+                                class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/DMT.png" alt="Architecture" class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/insurance.png" alt="Food" class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/micro atm.png" alt="Travel" class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/new account opening.png" alt="Animals"
+                                class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/travel booking.png" alt="Art" class="w-full h-full object-cover">
+                        </swiper-slide>
+                        <swiper-slide class="text-center flex justify-center">
+                            <img src="assets/images/utility payment.png" alt="Art" class="w-full h-full object-cover">
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave container positioned absolutely at the bottom -->
+        <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden">
+          <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+          <svg class="relative w-full" viewBox="0 0 1425 205.55" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <g>
+              <path d="M0,17.27l23.75,5.09C47.5,27.38,95,37.57,142.5,39.47s95-4.36,142.5-10.28,95-11.35,142.5-7.4,95,17.43,142.5,24,95,6.25,142.5,5.83,95-.9,142.5-3S950,43,997.5,42.92s95,3.12,142.5,2.88,95-4.11,142.5-3.62,95,5.51,118.75,8L1425,52.62v170.2H0Z" fill="#BFDBFE"></path>
+              <path d="M0,94.56l23.75-6.17C47.5,82.22,95,69.89,142.5,65.2s95-1.64,142.5,4.85S380,86.33,427.5,86.5,522.5,77,570,73.59s95-.66,142.5,1.81,95,4.6,142.5,3.78,95-4.6,142.5-6.58,95-1.89,142.5,1.24,95,9.45,142.5,13.15,95,4.85,118.75,5.35l23.75.57V222.82H0Z" fill="#93C5FD"></path>
+              <path d="M0,134,23.75,132C47.5,129.91,95,125.8,142.5,125.39s95,2.88,142.5,5.75,95,5.35,142.5,4,95-6.58,142.5-8.06,95,.66,142.5-.41,95-5.51,142.5-9.21,95-6.66,142.5-5.83,95,5.42,142.5,9.86,95,8.47,142.5,9.05,95-2.47,118.75-4L1425,125v97.84H0Z" fill="#3B82F6"></path>
+              <path d="M0,178.42l23.75-1.64c23.75-1.65,71.25-4.94,118.75-5.59s95,1.23,142.5,2.71,95,2.63,142.5,4.11,95,3.45,142.5,2.88,95-3.54,142.5-8.8,95-12.58,142.5-13.57,95,4.53,142.5,8.23,95,5.67,142.5,4,95-6.91,142.5-9.79,95-3.37,118.75-3.7L1425,157v65.78H0Z" fill="#1D4ED8"></path>
+            </g>
+          </svg>
+        </div>
+    </div><!-- end hero -->
+
+    <!-- mobile navbar -->
+    <div class="mobile-navbar">
+
+        <!-- navbar wrapper -->
+        <div class="navbar-wrapper fixed top-0 left-0 h-full bg-white z-30 w-64 shadow-lg p-5" x-show="isOpen"
+            @click.away=" isOpen = false" x-transition:enter="transition duration-300 -ml-64"
+            x-transition:enter-start="" x-transition:enter-end="transform translate-x-64"
+            x-transition:leave="transition duration-300" x-transition:enter-start=""
+            x-transition:leave-end="transform -translate-x-64">
+            <div class="close">
+                <button class="absolute top-0 right-0 mt-4 mr-4" @click=" isOpen = false">
+                    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="divide-y divide-gray-300 tracking-wider">
+                <li><a href="#" class="my-4 inline-block active font-bold">Home</a></li>
+                <li><a href="#" class="my-4 text-slate-500 inline-block hover:text-orange-500">About Us</a></li>
+                <li><a href="#" class="my-4 text-slate-500 inline-block hover:text-orange-500">Services</a></li>
+                <li><a href="#" class="my-4 text-slate-500 inline-block hover:text-orange-500">Contact Us</a></li>
+                <li><a href="#" class="my-4 text-slate-500 inline-block hover:text-orange-500">Login</a></li>
+                <li><a href="#"
+                        class="my-8 w-full text-center font-semibold cta inline-block bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">Get
+                        the App</a></li>
+            </ul>
+
+            <!-- follow us -->
+            <div class="follow">
+                <p class=" italic font-semibold">follow us:</p>
+                <div class="social flex space-x-5 mt-4 ">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"
+                            class="h-5 w-5 fill-current text-gray-800">
+                            <path
+                                d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
+                            class="h-5 w-5 fill-current text-gray-600" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512">
+                            <path fill="currentColor"
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                            class="h-5 w-5 fill-current text-gray-600" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube"
+                            class="h-5 w-5 fill-current text-gray-600" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end mobile navbar -->
+
+    <!-- events -->
+    <section>
+        <div class=" text-white py-8">
+            <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+                <!-- side data -->
+                <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8 ">
+                    <p class="ml-2 text-blue-500 uppercase tracking-loose">Working Process</p>
+                    <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2 text-rose-900 ">Working
+                        Process of Fest</p>
+                    <p class="text-sm md:text-base text-gray-900 mb-4">
+                        Here’s your guide to the tech fest 2021 process. Go through all the steps to know the exact
+                        process of the
+                        fest.
+                    </p>
+                    <a href="#"
+                        class="bg-transparent mr-auto hover:bg-blue-500 text-blue-600 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">
+                        Explore Now</a>
+                </div>
+                <!-- sticky events -->
+                <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+                    <div class="container mx-auto w-full h-full">
+                        <div class="relative wrap overflow-hidden p-10 h-full">
+                            <div class="border-2-2 border-blue-500 absolute h-full border"
+                                style="right: 50%; border: 2px solid #0861c5; border-radius: 1%;"></div>
+                            <div class="border-2-2 border-blue-555 absolute h-full border"
+                                style="left: 50%; border: 2px solid #0077ff; border-radius: 1%;"></div>
+                            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1 w-5/12 p-4 text-right shadow-xl  hover:-translate-y-2 transition-transform duration-700 rounded tracking-wide">
+                                    <p class="mb-3 text-base text-blue-500">1-6 May, 2021</p>
+                                    <h4 class="mb-3 text-black font-bold text-lg md:text-2xl">Registration</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                                        Pick your favourite event(s) and register in that event by filling the form
+                                        corresponding to that
+                                        event. Its that easy
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mb-8 flex justify-between items-center  w-full right-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1  w-5/12 p-4 text-left shadow-xl hover:-translate-y-2 transition-transform duration-700 rounded">
+                                    <p class="mb-3 text-base text-blue-500">6-9 May, 2021</p>
+                                    <h4 class="mb-3 text-black font-bold text-lg md:text-2xl">Participation</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                                        Participate online. The links for your registered events will be sent to you via
+                                        email and whatsapp
+                                        groups. Use those links and show your talent.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1 w-5/12 rounded p-4 shadow-xl hover:-translate-y-2 transition-transform duration-700 text-right">
+                                    <p class="mb-3 text-base text-blue-500"> 10 May, 2021</p>
+                                    <h4 class="mb-3 text-black font-bold text-lg md:text-2xl">Result Declaration</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                                        The ultimate genius will be revealed by our judging panel on 10th May, 2021 and
+                                        the resukts will be
+                                        announced on the whatsapp groups and will be mailed to you.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                                <div class="order-1 w-5/12"></div>
+
+                                <div class="order-1 w-5/12 p-4 shadow-xl hover:-translate-y-2 transition-transform duration-700 rounded">
+                                    <p class="mb-3 text-base text-blue-500">12 May, 2021</p>
+                                    <h4 class="mb-3 text-black font-bold text-lg md:text-2xl text-left">Prize Distribution</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-900 text-opacity-100">
+                                        The winners will be contacted by our team for their addresses and the winning
+                                        goodies will be sent at
+                                        their addresses.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="mx-auto -mt-36 md:-mt-36"
+                            src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+</body>
+
+</html> 
