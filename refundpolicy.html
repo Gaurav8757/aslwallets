@@ -76,7 +76,7 @@
             </div>
             <div class="space-y-8">
                 <!-- Privacy & Policy -->
-                <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up">
+                <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up">
                     <button @click="open = !open"
                         class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                         <span>1. Mobile/DTH/Data Card Recharge Refund Policies</span>
@@ -85,7 +85,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                    <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                         <p>
                             All sales of Recharge are final, and there will be no refund or
                             exchange will be permitted. Please be advised that you are
@@ -115,7 +120,7 @@
                     </div>
                 </div>
 
-                <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+                <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                     data-aos-delay="100">
                     <button @click="open = !open"
                         class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
@@ -125,7 +130,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                    <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                         <p>
                             B2B customer takes the balance. In any event, the balance will
                             not return. Kindly note, in all cases, our liability is only

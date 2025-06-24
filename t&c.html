@@ -80,9 +80,9 @@
                 TERMS AND CONDITIONS FOR APPOINTMENT AS RETAILER/DISTRIBUTOR/SUPER DISTRIBUTOR.
             </p>
         </div>
-        <div class="space-y-6 ">
+        <div class="space-y-6">
             <!-- Operation of the Retail/Distributor/Super Distributor Outlet -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up">
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up">
 
                 <button @click="open = !open"
                     class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
@@ -92,7 +92,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open"   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" x-collapse class="px-6 pb-4 text-gray-700">
                     <p>These Terms and Conditions shall apply to and govern the commercial arrangement between ASL
                         WALLETS and the Retailer/Distributor/Super Distributor. These Terms and Conditions and any
                         attachments hereto represent the entire agreement between ASL WALLETS and the
@@ -123,17 +128,22 @@
             </div>
 
             <!-- Definitions and Interpretation -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                 data-aos-delay="100">
                 <button @click="open = !open"
-                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none">
+                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                     <span>2. Definitions and Interpretation</span>
                     <svg :class="{'rotate-180': open}" class="h-5 w-5 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                     <p>
                         In this Terms of Use, unless the contrary intention appears...
                         (add the rest of your section 2 content here)
@@ -142,81 +152,106 @@
             </div>
 
             <!-- Acceptance -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                 data-aos-delay="150">
                 <button @click="open = !open"
-                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none">
+                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                     <span>3. Acceptance</span>
                     <svg :class="{'rotate-180': open}" class="h-5 w-5 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                     <p>Content for Acceptance section goes here...</p>
                 </div>
             </div>
 
             <!-- Payments -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                 data-aos-delay="200">
                 <button @click="open = !open"
-                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none">
+                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                     <span>4. Payments</span>
                     <svg :class="{'rotate-180': open}" class="h-5 w-5 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                     <p>Content for Payments section goes here...</p>
                 </div>
             </div>
 
             <!-- Employees -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                 data-aos-delay="250">
                 <button @click="open = !open"
-                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none">
+                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                     <span>5. Employees</span>
                     <svg :class="{'rotate-180': open}" class="h-5 w-5 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                     <p>Content for Employees section goes here...</p>
                 </div>
             </div>
 
             <!-- Exclusivity -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                 data-aos-delay="300">
                 <button @click="open = !open"
-                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none">
+                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                     <span>6. Exclusivity</span>
                     <svg :class="{'rotate-180': open}" class="h-5 w-5 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                     <p>Content for Exclusivity section goes here...</p>
                 </div>
             </div>
 
             <!-- Refund Policy -->
-            <div x-data="{ open: false }" class="border rounded-lg bg-white shadow" data-aos="fade-up"
+            <div x-data="{ open: false }" class="rounded-lg bg-white shadow-xl" data-aos="fade-up"
                 data-aos-delay="350">
                 <button @click="open = !open"
-                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none">
+                    class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left focus:outline-none cursor-pointer">
                     <span>7. Refund Policy</span>
                     <svg :class="{'rotate-180': open}" class="h-5 w-5 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div x-show="open" x-collapse class="px-6 pb-4 text-gray-700">
+                <div x-show="open" x-collapse   x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-y-0 origin-top"
+             x-transition:enter-end="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100 transform scale-y-100 origin-top"
+             x-transition:leave-end="opacity-0 transform scale-y-0 origin-top" class="px-6 pb-4 text-gray-700">
                     <h3 class="font-semibold text-lg mb-2">
                         Mobile/DTH/Data Card Recharge Refund Policies
                     </h3>
