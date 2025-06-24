@@ -19,7 +19,7 @@
     <title>ASL Wallets</title>
   </head>
 
-  <body class="antialiased" x-data="{ isOpen : false}">
+  <body class="antialiased" x-data="{ isOpen : false}" x-init="isOpen = false">
     <!-- header -->
     <header class="header">
       <!-- container -->
@@ -159,13 +159,11 @@
               </div>
             </button> -->
               <button
-                class="google bg-white shadow-md cursor-pointer rounded-lg hover:-translate-y-1 transform duration-400"
-              >
+                class="google bg-white shadow-md cursor-pointer rounded-lg hover:-translate-y-1 transform duration-400">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.aslwallets_aeps"
                   class="flex items-center px-3 py-2 space-x-4"
-                  target="_blank"
-                >
+                  target="_blank">
                   <div class="image">
                     <svg
                       class="w-6 h-6"
@@ -332,18 +330,19 @@
     <!-- end hero -->
 
     <!-- mobile navbar -->
-    <div class="mobile-navbar">
+    <div class="mobile-navbar"  x-cloak>
       <!-- navbar wrapper -->
       <div
         class="navbar-wrapper fixed top-0 left-0 h-full bg-white z-30 w-64 shadow-lg p-5 leading-relaxed"
         x-show="isOpen"
-        @click.away=" isOpen = false"
         x-transition:enter="transition duration-300 -ml-64"
         x-transition:enter-start=""
         x-transition:enter-end="transform translate-x-64"
         x-transition:leave="transition duration-300"
         x-transition:enter-start=""
         x-transition:leave-end="transform -translate-x-64"
+        @click.away=" isOpen = false"
+        style="display: none"
       >
         <div class="close">
           <button
@@ -365,39 +364,39 @@
         </div>
         <ul class="divide-y divide-gray-300 tracking-wider">
           <li>
-            <a href="#" class="my-4 inline-block active font-bold">Home</a>
+            <a href="index.html" class="my-4 inline-block active font-bold">Home</a>
           </li>
           <li>
             <a
-              href="#"
+              href="about.html"
               class="my-4 text-slate-500 inline-block hover:text-red-500"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="#"
+              href="services.html"
               class="my-4 text-slate-500 inline-block hover:text-red-500"
               >Services</a
             >
           </li>
           <li>
             <a
-              href="#"
+              href="contact.html"
               class="my-4 text-slate-500 inline-block hover:text-red-500"
               >Contact Us</a
             >
           </li>
           <li>
             <a
-              href="#"
+              href="https://aslwallets.in/login.php"
               class="my-4 text-slate-500 inline-block hover:text-red-500"
               >Login</a
             >
           </li>
           <li>
             <a
-              href="#"
+               href="https://play.google.com/store/apps/details?id=com.aslwallets_aeps"
               class="my-8 w-full text-center font-semibold cta inline-block bg-red-500 hover:bg-red-600 px-3 py-2 rounded text-white font-normal"
               >Get the App</a
             >
