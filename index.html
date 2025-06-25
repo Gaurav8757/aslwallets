@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo_svg.svg" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -13,6 +15,22 @@
     @theme {
         --color-clifford: #da373d;
       }
+       @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  @media (prefers-reduced-motion) {
+    .animate-marquee {
+      animation: none;
+      justify-content: center;
+    }
+  }
+   .animate-marquee:hover {
+    animation-play-state: paused;
+  }
     </style>
   <title>ASL Wallets</title>
 </head>
@@ -26,7 +44,8 @@
       <div class="header-wrapper flex items-center justify-between">
         <!-- header logo -->
         <div class="header-logo">
-          <img src="assets/images/logo_svg.svg" alt="Aslwallets" class="h-14 w-14 md:h-28 md:w-28" />
+          <a href="index.html">
+            <img src="assets/images/logo_svg.svg" alt="Aslwallets" class="h-14 w-14 md:h-24 md:w-24" /> </a>
         </div>
 
         <!-- mobile toggle -->
@@ -448,7 +467,7 @@
             <i class="fas fa-gift text-white text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">
-           SMS Provider
+            SMS Provider
           </h3>
           <p class="text-gray-600">
             Exclusive offer schemes and reward bonanza for partners.
@@ -602,6 +621,73 @@
             <i class="fas fa-store mr-2"></i>Become an Agent
           </button> -->
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Partners -->
+  <section>
+    <div class="relative w-full overflow-hidden bg-white py-8">
+      <h1 class="text-center text-3xl md:text-4xl font-bold">
+        Our Partners
+      </h1>
+      <!-- Gradient fade effects -->
+      <div class="absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent"></div>
+      <div class="absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent"></div>
+
+      <!-- Marquee container -->
+      <div class="animate-marquee animation transform translate-x whitespace-nowrap flex items-center py-12">
+        <!-- Logo list - duplicate this block for continuous loop -->
+        <div class="inline-flex items-center space-x-8 md:space-x-12 lg:space-x-16 px-4">
+          <img src="assets/images/nsdl.svg" alt="NSDL Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/aeps.svg" alt="AEPS Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/NPCI.svg" alt="NPCI Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/bharat_connect.svg" alt="BBPS Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/phonepe.svg" alt="PhonePe Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/airtel-payment.svg" alt="Airtel Payments Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/HDB_BIG.svg" alt="HDB Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/YESBANK.svg" alt="Yes Bank Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/dbs.svg" alt="DBS Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/idfc.svg" alt="IDFC Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+          <img src="assets/images/Uti.svg" alt="UTI Logo"
+            class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy" />
+        </div>
+
+        <!-- Duplicate for seamless looping -->
+        <!-- <div class="inline-flex items-center space-x-8 md:space-x-12 lg:space-x-16 px-4" aria-hidden="true">
+      <img src="assets/images/nsdl.svg" alt="NSDL Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/aeps.svg" alt="AEPS Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/NPCI.svg" alt="NPCI Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/bharat_connect.svg" alt="BBPS Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/phonepe.svg" alt="PhonePe Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/airtel-payment.svg" alt="Airtel Payments Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/HDB_BIG.svg" alt="HDB Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/YESBANK.svg" alt="Yes Bank Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/dbs.svg" alt="DBS Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/idfc.svg" alt="IDFC Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+      <img src="assets/images/Uti.svg" alt="UTI Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+    </div> -->
       </div>
     </div>
   </section>
